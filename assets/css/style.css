@@ -1,133 +1,177 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
-body{
-    background-color: #080808;
+:root{
+    --light: white;
+    --dark: black;
+}
+
+.header{
+    background-color: rgb(224, 213, 213);
     color: white;
-}
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image: url(assets/images/background.png);
-    background-size: cover;
-    background-position: center;
-}
-.container{
-    padding: 10px 10%;
-     
+    text-align: center;
 }
 nav{
-    display: flex;
+    display:flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
+    justify-content: space-evenly;
+    padding-top: 45px;
+    padding-left: 8%;
+    padding-right: 8%;
 }
-nav ul li{
+.logo{
+    color: white;
+    font-size: 55px;
+    letter-spacing: 1px;
+    cursor: pointer; 
+}
+span{
+    color: #f5dc34;
+}
+
+nav >ul >li{
+    padding: 20px;
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
+   
+}
+.navli{
+    padding: 30px;
+    background-color: rgb(224, 198, 198);
+    border-radius: 8px;
+    opacity: 0.6;
+    color: #907373;
 
 }
-nav ul li a{
-    color: #fff;
-    font-size: 18px;
+.navli:hover{
+    color: rgb(6, 5, 5);
+    transition: all 0.4s ease-in-out;
+    border-radius: 35px;
+    background-color:#f3e261 ;
+}
+.btn{
+    background-color: #f5dc34;
+    color: white;
     text-decoration: none;
-    position: relative;
-
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: .4s;
 }
-nav ul li a::after{
-    content: "";
-    width: 0%;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-
+.btn:hover{
+    transform: (1.2);
 }
-nav ul li a:hover::after{
-    width: 100%;
+/*----------------content-----------*/
+main{
+    display: flex;
 }
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
-}
-.header-text h1{
-    font-size: 60px;
-    margin-top: 20px;
-}
-.header-text h1 span{
-    color: #df638a;
-}
-/*--------------about-----------------*/
-#about{
-    padding: 60px 0;
-    color: #ababab;
-}
-.row{
-    display: left;
-    justify-content: space-between;
+aside{
+    flex: 30%;
+    background-color: #ccb0b0;
+    padding: 20px;
     flex-wrap: wrap;
 }
-.about-col-1{
-    flex-basis: 35%;
-
-}
-.about-col-1 img{
-    width: 50%;
-    border-radius: 15px;
-
-}
-.about-col-2{
-    flex-basis: 60%; 
-}
-.sub-tittle{
-    font-size: 60px;
-    font-weight: 600;
-    color: #fff;
-}
-.tab-tittles{
+/*--------------about-----------------*/
+.about-me{
     display: flex;
-    margin: 20px 0 40px;
+    align-items: center;
 }
-.tab-links{
-    margin-right: 50px;
-    font-size: 18px;
-    font-weight: 500;
+.about-me >p{
+    width: 60%;
+}
+.aboutpic{
+    margin: 30px;
+    width: 50%;
+    background-color: #ccb0b0;
+    border-radius: 13px;
+}
+.projects {
+    display: block;
+    margin: 60px;
+    padding: 60px; 
+}
+.container{
+    display: flex;
+    
+}
+
+button{
+    background-color: #f5dc34;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+button:hover{
+    background: transparent;
+    border: 2px solid #f5dc34;
     cursor: pointer;
+}
+
+.contact-me{
+    width: 100;
+    height: 200px;
+    background: #907373;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-me p{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.contact-me .button-two{
+    background-color:#f5dc34;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+}
+.contact-me .button-two:hover{
+    background-color: transparent;
+    border: 2px solid #f5dc34;
+    cursor: pointer;
+}
+footer{
     position: relative;
-}
-
- 
-#about::before{
-    content: "";
-    position:absolute;
-    top: 0;
-    left: 0;
-    background: url("assets/images/Me.png") no-repeat center center/cover;
-    height: 400px;
     width: 100%;
-    z-index: -1;
-    opacity: .8;
-
+    height: 100px;
+    background: #ccb0b0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.tab-links::after{
-    content: "";
-    width: 0;
-    height: 3px;
-    background: #ff004f;
-    position: absolute;
-    left: 0;
-    bottom: 8px;
-    transition: 0.5s;
+form ul li{
+    background-color: #ccb0b0;
+    align-items: baseline;
 }
-.tab-links.active-link::after{
-   width: 50%;
+
+.social{
+    display: flex;
+}
 
 
+.end{
+    position: center;
+    color:#f5dc34;
+    bottom: 35px;
+    font-size: 10px;
+ 
 }
