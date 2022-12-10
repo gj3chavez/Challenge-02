@@ -8,7 +8,9 @@
 
 ## Usage
 
-
+https://github.com/gj3chavez/Challenge-02
 
 
 ### Screenshot
+
+![Screeshot of Challenge 2](assets/images/screenshotgc.png)
