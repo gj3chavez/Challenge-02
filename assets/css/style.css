@@ -1,14 +1,18 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: "Arial", sans-serif;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    
 }
 :root{
     --light: white;
     --dark: black;
+}
+body{
+    background-color: antiquewhite;
 }
 
 .header{
@@ -26,9 +30,10 @@ nav{
 }
 .logo{
     color: white;
-    font-size: 55px;
+    font-size: 65px;
     letter-spacing: 1px;
     cursor: pointer; 
+    margin: 20px;
 }
 span{
     color: #f5dc34;
@@ -68,40 +73,51 @@ nav >ul >li{
 .btn:hover{
     transform: (1.2);
 }
-/*----------------content-----------*/
+/*--------------about me-----------------*/
 main{
     display: flex;
-}
-aside{
-    flex: 30%;
-    background-color: #ccb0b0;
-    padding: 20px;
     flex-wrap: wrap;
+    justify-content: space-around;
+    
 }
-/*--------------about-----------------*/
-.about-me{
+
+section{
     display: flex;
-    align-items: center;
 }
-.about-me >p{
-    width: 60%;
-}
-.aboutpic{
-    margin: 30px;
-    width: 50%;
-    background-color: #ccb0b0;
+
+.about-pic{
+    margin: 60px;
+    border: 30px;
+    width: 30%;
     border-radius: 13px;
 }
+.about-me- >p{
+    text-align: left;
+    width: 60%;
+    font-size: large;
+    margin: 60px;
+    line-height: 60px;
+}
+h1{
+    text-align: center;
+}
+
+
+
+
 .projects {
     display: block;
     margin: 60px;
     padding: 60px; 
-}
-.container{
-    display: flex;
-    
+    width: 100%;
 }
 
+.the-projects{
+    width: 30%;
+    margin: 30px;
+    display: block;
+
+}
 button{
     background-color: #f5dc34;
     color: white;
@@ -119,7 +135,7 @@ button:hover{
 }
 
 .contact-me{
-    width: 100;
+    width: 100%;
     height: 200px;
     background: #907373;
     display: flex;
@@ -148,6 +164,7 @@ button:hover{
     border: 2px solid #f5dc34;
     cursor: pointer;
 }
+/*----------------footer-----------*/
 footer{
     position: relative;
     width: 100%;
@@ -163,15 +180,25 @@ form ul li{
     align-items: baseline;
 }
 
-.social{
-    display: flex;
-}
-
 
 .end{
     position: center;
     color:#f5dc34;
     bottom: 35px;
     font-size: 10px;
- 
 }
+@media(max-width:1425px){
+    header{
+        padding: 16px;
+        transition: .3s;
+    }
+    section{
+        padding: 70px;
+        transition: .3s;
+
+    }
+
+
+}
+
+
